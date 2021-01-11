@@ -1,24 +1,20 @@
 # vue-docker-example
 
-## Project setup
+A test project that dockerizes a [Vue](https://vuejs.org/) project
+having [VueRouter](https://router.vuejs.org/) with history mode.
+
+## How to run
+
+Build docker image:
+
 ```
-npm install
+docker build -t vue-docker-example .
 ```
 
-### Compiles and hot-reloads for development
+Create and run docker container:
+
 ```
-npm run serve
+docker run -it -p 8080:80 --rm --name vue-docker-example-1 vue-docker-example
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+After that go to http://localhost:8080/ to view the result.
